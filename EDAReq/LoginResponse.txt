@@ -1,0 +1,25 @@
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+	<S:Body>
+		<LoginResponse xmlns="http://schemas.ericsson.com/cai3g1.2/">
+			<sessionId>f7bca25f90b542ef98d78bedbf445d56</sessionId>
+			<baseSequenceId>1292572620</baseSequenceId>
+		</LoginResponse>
+	</S:Body>
+</S:Envelope>
+
+<cai3g1_2:LoginResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:cai3g1_2="http://schemas.ericsson.com/cai3g1.2/" >
+	<cai3g1_2:sessionId>567576523232222</cai3g1_2:sessionId>
+	<cai3g1_2:baseSequenceId>567575</cai3g1_2:baseSequenceId>
+</cai3g1_2:LoginResponse>
+
+var pDoc=process.processDocument;
+
+var operation = "Create";
+var iface = "cai3g1_2.NTTServiceInterface";
+
+
+
+var res = Global.invokeInterface(iface, operation, [request,securityHeader]);
+if(res[0] != null) {
+ pDoc.sessionId==res[0].sessionId;
+}

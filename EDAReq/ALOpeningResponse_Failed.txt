@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cai3g="http://schemas.ericsson.com/cai3g1.2/">
+
+  <S:Header>
+
+    <cai3g:SessionId>aa242e493b4f40c7ad84a2e7ed75dcc6</cai3g:SessionId>
+
+  </S:Header>
+
+  <S:Body>
+
+    <ns2:Fault xmlns:ns2="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns3="http://www.w3.org/2003/05/soap-envelope">
+
+      <faultcode>ns2:Server</faultcode>
+
+      <faultstring>This is a server fault</faultstring>
+
+      <detail>
+
+        <Cai3gFault:Cai3gFault xmlns="http://schemas.ericsson.com/cai3g1.2/" xmlns:Cai3gFault="http://schemas.ericsson.com/cai3g1.2/">
+
+          <faultcode>4006</faultcode>
+
+          <faultreason>
+
+            <reasonText>External error.</reasonText>
+
+          </faultreason>
+
+          <faultrole>MF</faultrole>
+
+          <details>
+
+            <PGFault:PGFault xmlns="http://schemas.ericsson.com/pg/1.0/" xmlns:PGFault="http://schemas.ericsson.com/pg/1.0/">
+
+              <errorcode>1101</errorcode>
+
+              <errormessage>External error.</errormessage>
+
+              <errordetails>Failed request: NTTService@http://schemas.ericsson.com/ma/CA/NTTService/ Create in model: NTTPOCSUB version: 2.0
+Possible issues:
+Task with name: CreateALOpeningPPPOE failed its execution with internal error code: 45009.</errordetails>
+
+            </PGFault:PGFault>
+
+          </details>
+
+        </Cai3gFault:Cai3gFault>
+
+      </detail>
+
+    </ns2:Fault>
+
+  </S:Body>
+
+</S:Envelope>  

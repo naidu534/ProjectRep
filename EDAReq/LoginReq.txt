@@ -1,0 +1,14 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cai3="http://schemas.ericsson.com/cai3g1.2/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <cai3:Login>
+         <cai3:userId>XXXXX</cai3:userId>
+         <cai3:pwd>XXXXX</cai3:pwd>
+      </cai3:Login>
+   </soapenv:Body>
+</soapenv:Envelope> 
+
+var loginRequest=new DataStructure("cai3g1_2.Login");
+loginRequest.userId="EOCUser";
+loginRequest.pwd="ocn";
+loginRequest.toXML();

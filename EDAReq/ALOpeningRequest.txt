@@ -1,0 +1,53 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cai3="http://schemas.ericsson.com/cai3g1.2/" xmlns:ntt="http://schemas.ericsson.com/ma/CA/NTTService/">
+   <soapenv:Header>
+      <cai3:SessionId>aa242e493b4f40c7ad84a2e7ed75dcc6</cai3:SessionId>
+   </soapenv:Header>
+   <soapenv:Body>
+      <cai3:Create>
+         <cai3:MOType>NTTService@http://schemas.ericsson.com/ma/CA/NTTService/</cai3:MOType>
+         <cai3:MOId>
+            <ntt:deviceId>ALL</ntt:deviceId>
+            <ntt:serviceName>CreateALOpening</ntt:serviceName>
+         </cai3:MOId>
+         <cai3:MOAttributes>
+            <ntt:CreateNTTService serviceName="CreateALOpening">
+               <ntt:CreateALOpening>
+                  <ntt:serviceName>CreateALOpening</ntt:serviceName>
+                  <ntt:INTERFACE-NAME>E1/1</ntt:INTERFACE-NAME>
+                  <ntt:USERID>user01</ntt:USERID>
+                  <ntt:CLEARTEXT_PASSWORDID>ocn</ntt:CLEARTEXT_PASSWORDID>
+                  <ntt:ServiceID>testcase3</ntt:ServiceID>
+               </ntt:CreateALOpening>
+            </ntt:CreateNTTService>
+         </cai3:MOAttributes>
+      </cai3:Create>
+   </soapenv:Body>
+</soapenv:Envelope> 
+
+
+var request=new DataStructure("cai3g1_2.Create");
+request.MOType='NTTService@http://schemas.ericsson.com/ma/CA/NTTService/';
+request.MOId.deviceId='ALL;'
+request.MOId.serviceName='CreateALOpening';
+
+request.MOAttributes.CreateNTTService.serviceName='CreateALOpening';
+request.MOAttributes.CreateNTTService.CreateALOpening.serviceName='CreateALOpening';
+request.MOAttributes.CreateNTTService.CreateALOpening.INTERFACE_NAME='E1/11';
+request.MOAttributes.CreateNTTService.CreateALOpening.USERID='CreateALOpening';
+request.MOAttributes.CreateNTTService.CreateALOpening.CLEARTEXT_PASSWORDID='ocn';
+request.MOAttributes.CreateNTTService.CreateALOpening.ServiceID='testcase3';
+
+
+
+var header=new DataStructure("cai3g1_2.HeadInfo");
+header.sessionId.SessionId='adadf';
+
+header.toXML();
+
+
+
+
+
+
+
+ 
