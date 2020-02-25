@@ -1,0 +1,2 @@
+FROM ericsson:bangalore-1.0
+RUN yum install -y git
